@@ -1,0 +1,20 @@
+*******************************************************************************
+README
+*******************************************************************************
+	Matricea de pixeli este stocata sub forma de vector (se face cast rezultand 
+un vector de tipul pixel pentru imagini color sau un vector de tipul char 
+pentru imagini alb-negru). 
+	Procesul cu rank 0 citeste imaginea si pentru fiecare filtru executa 
+urmatorii pasi:
+	->trimite celorlalte procese cate o bucata din imagine
+	->aplica filtru pentru bucata sa de imagine
+	->reansambleaza imaginea 
+	Cand nu mai sunt filtre de aplicat , procesul cu rank 0 scrie imaginea 
+obtinuta in fisier.
+	Celelalte procese primesc detalii precum latimea, inaltimea , numarul de 
+bytes primiti din imagine , numarul de bytes ce trebuie sa ii intoarca iar 
+pentru fiecare filtru partea lor de imagine ce urmeaza a fi procesata . Apoi
+se aplica filtrul corespunzator si se trimite catre procesul 0 imaginea
+prelucrata. 
+
+*******************************************************************************
