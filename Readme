@@ -1,6 +1,4 @@
 *******************************************************************************
-README
-*******************************************************************************
 	Matricea de pixeli este stocata sub forma de vector (se face cast rezultand 
 un vector de tipul pixel pentru imagini color sau un vector de tipul char 
 pentru imagini alb-negru). 
